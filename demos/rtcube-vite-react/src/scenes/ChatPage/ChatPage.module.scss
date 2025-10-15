@@ -1,0 +1,34 @@
+@use "@tencentcloud/uikit-base-component-react/dist/styles/theme/util" as *;
+@use '../../styles/mixins' as mixins;
+
+.ChatPage {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  margin: 10vh 5vw;
+  flex-direction: row;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.08), inset 0 -1px 0 rgba(255,255,255,0.05);
+  border-radius: 16px;
+  
+  @include theme() {
+    background-color: get(bg-color-operate);
+    color: get(text-color-primary);
+  }
+
+  @include mixins.tablet {
+    margin: 10vh 15vw;
+  }
+}
+
+.sidebar {
+  display: flex;
+  max-width: 400px;
+  min-width: 300px;
+}
+
+.mainContent {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid rgba(0, 0, 0, 0.08);
+}
